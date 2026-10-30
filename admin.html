@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | Aspirasi OSIS</title>
+  <link rel="icon" href="logo-osis.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+
+<!-- LOGIN -->
+<section id="loginView" class="login-wrap">
+  <form id="loginForm" class="login-card">
+    <img src="logo-osis.jpg" alt="Logo OSIS">
+    <h2>Admin OSIS</h2>
+    <p>Masuk untuk mengelola aspirasi</p>
+    <input type="email" id="email" placeholder="Email" required autocomplete="username">
+    <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+    <button type="submit" class="a-btn">Masuk</button>
+    <div id="loginErr" class="a-err"></div>
+    <a href="index.html" class="a-back">← Kembali ke website</a>
+  </form>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashView" hidden>
+  <header class="a-header">
+    <div class="a-brand"><img src="logo-osis.jpg" alt=""><b>Dashboard Aspirasi OSIS</b></div>
+    <div>
+      <a href="index.html">Website</a>
+      <button id="btnLogout" class="a-link">Keluar</button>
+    </div>
+  </header>
+
+  <main class="a-main">
+    <div class="a-stats" id="stats"></div>
+
+    <div class="a-toolbar">
+      <select id="filterStatus">
+        <option value="">Semua status</option>
+        <option value="baru">Baru</option>
+        <option value="dibaca">Dibaca</option>
+        <option value="diproses">Diproses</option>
+        <option value="selesai">Selesai</option>
+      </select>
+      <select id="filterKategori">
+        <option value="">Semua kategori</option>
+        <option>Fasilitas</option><option>Kegiatan</option><option>Pembelajaran</option>
+        <option>Kebersihan</option><option>OSIS</option><option>Lainnya</option>
+      </select>
+      <input type="search" id="cari" placeholder="Cari isi atau nama...">
+      <button id="btnExport" class="a-btn small">Unduh CSV</button>
+    </div>
+
+    <div id="list"></div>
+  </main>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aspirasi OSIS | SMA Negeri 4 Tebing Tinggi</title>
+  <meta name="description" content="Sampaikan aspirasimu kepada OSIS SMA Negeri 4 Tebing Tinggi - Kabinet Arshaka.">
+  <link rel="icon" href="assets/logo-osis.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<header class="nav" id="nav">
+  <a href="#beranda" class="brand">
+    <img src="logo-osis.jpg" alt="Logo OSIS">
+    <span>OSIS SMAN 4<br><small>Tebing Tinggi</small></span>
+  </a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav id="menu">
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kabinet">Kabinet</a>
+    <a href="#alur">Alur</a>
+    <a href="#aspirasi" class="btn-nav">Kirim Aspirasi</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="beranda">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="chip reveal">Kabinet Arshaka • 2026/2027</span>
+      <h1 class="reveal" style="--d:.1s">Suaramu <em>Berarti</em> untuk Sekolah Kita</h1>
+      <p class="reveal" style="--d:.2s">Wadah resmi aspirasi siswa SMA Negeri 4 Tebing Tinggi. Sampaikan ide, saran, dan keluhanmu langsung kepada OSIS.</p>
+      <div class="hero-btn reveal" style="--d:.3s">
+        <a href="#aspirasi" class="btn">Sampaikan Aspirasi</a>
+        <a href="#tentang" class="btn btn-ghost">Pelajari Lebih Lanjut</a>
+      </div>
+    </div>
+    <div class="hero-logo reveal zoom" style="--d:.2s">
+      <img src="logo-osis.jpg" alt="Logo OSIS Kabinet Arshaka">
+    </div>
+  </div>
+  <a href="#tentang" class="scroll-down" aria-label="Scroll"><span></span></a>
+</section>
+
+<!-- TENTANG -->
+<section class="section" id="tentang">
+  <div class="container">
+    <div class="title reveal">
+      <small>Tentang</small>
+      <h2>Mengapa Aspirasi Penting?</h2>
+    </div>
+    <div class="cards">
+      <article class="card reveal" style="--d:0s">
+        <div class="ico">💬</div>
+        <h3>Didengar</h3>
+        <p>Setiap aspirasi dibaca dan dicatat oleh pengurus OSIS.</p>
+      </article>
+      <article class="card reveal" style="--d:.15s">
+        <div class="ico">🤝</div>
+        <h3>Aman &amp; Anonim</h3>
+        <p>Kamu bebas memilih untuk mengirim tanpa menyebutkan nama.</p>
+      </article>
+      <article class="card reveal" style="--d:.3s">
+        <div class="ico">🚀</div>
+        <h3>Ditindaklanjuti</h3>
+        <p>Aspirasi dibawa ke rapat dan diteruskan kepada pihak sekolah.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- KABINET -->
+<section class="section alt" id="kabinet">
+  <div class="container">
+    <div class="title reveal">
+      <small>Kabinet Arshaka</small>
+      <h2>OSIS Periode 2026/2027</h2>
+    </div>
+    <figure class="photo reveal zoom">
+      <img src="fotbar-osis.png" alt="Foto bersama OSIS Kabinet Arshaka 2026/2027" loading="lazy">
+    </figure>
+    <p class="center reveal">Kami hadir untuk menampung suara seluruh siswa dan mewujudkan lingkungan sekolah yang lebih baik.</p>
+  </div>
+</section>
+
+<!-- ALUR -->
+<section class="section" id="alur">
+  <div class="container">
+    <div class="title reveal">
+      <small>Alur</small>
+      <h2>Bagaimana Caranya?</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><b>1</b><h4>Tulis</h4><p>Isi formulir aspirasi di bawah.</p></div>
+      <div class="step reveal" style="--d:.15s"><b>2</b><h4>Kirim</h4><p>Aspirasi tersimpan aman di sistem.</p></div>
+      <div class="step reveal" style="--d:.3s"><b>3</b><h4>Ditinjau</h4><p>OSIS membaca dan membahasnya.</p></div>
+      <div class="step reveal" style="--d:.45s"><b>4</b><h4>Tindak Lanjut</h4><p>Diteruskan ke pihak terkait.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section form-section" id="aspirasi">
+  <div class="container narrow">
+    <div class="title reveal light">
+      <small>Formulir</small>
+      <h2>Kirim Aspirasimu</h2>
+    </div>
+    <form id="formAspirasi" class="form reveal" novalidate>
+      <div class="row">
+        <label>Nama
+          <input type="text" name="nama" id="nama" maxlength="100" placeholder="Nama kamu (opsional)">
+        </label>
+        <label>Kelas
+          <input type="text" name="kelas" maxlength="20" placeholder="Contoh: XI IPA 2">
+        </label>
+      </div>
+      <label>Kategori
+        <select name="kategori" required>
+          <option value="">-- Pilih kategori --</option>
+          <option>Fasilitas</option>
+          <option>Kegiatan</option>
+          <option>Pembelajaran</option>
+          <option>Kebersihan</option>
+          <option>OSIS</option>
+          <option>Lainnya</option>
+        </select>
+      </label>
+      <label>Aspirasi
+        <textarea name="isi" id="isi" rows="6" maxlength="1500" placeholder="Tuliskan aspirasi, saran, atau keluhanmu..." required></textarea>
+        <small class="count"><span id="count">0</span>/1500</small>
+      </label>
+      <label class="check">
+        <input type="checkbox" name="anonim" id="anonim"> Kirim sebagai anonim
+      </label>
+      <input type="text" name="kontak_extra" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" class="btn btn-gold" id="btnKirim">Kirim Aspirasi</button>
+      <div id="alert" class="alert" role="alert"></div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <img src="logo-osis.jpg" alt="Logo OSIS">
+  <p><b>OSIS SMA Negeri 4 Tebing Tinggi</b><br>Kabinet Arshaka • 2026/2027</p>
+  <a href="admin.html" class="admin-link">🔒 Login Pengurus OSIS</a>
+  <small>&copy; <span id="year"></span> OSIS SMAN 4 Tebing Tinggi. Hak cipta dilindungi.</small>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
